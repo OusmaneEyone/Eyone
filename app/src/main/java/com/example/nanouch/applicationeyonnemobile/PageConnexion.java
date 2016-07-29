@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class PageConnexion extends AppCompatActivity {
 
     private EditText identifiant,motdepasse;
-    private Button connexion;
+    private Button connexion; // pour la connexion
     private static String mdp,id;
 
 

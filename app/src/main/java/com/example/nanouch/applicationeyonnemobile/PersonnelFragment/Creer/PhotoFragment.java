@@ -40,6 +40,7 @@ public class PhotoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_photo, container, false);
 
         telecharger = (Button) view.findViewById(R.id.btn_telecharger);
+        photo = (ImageView)view.findViewById(R.id.imag_photo);
 
         telecharger.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,12 +73,9 @@ public class PhotoFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == codePhoto && data != null) {   //Si la requete est égale à notre codePhoto et les données ne sont pas nulle
-
            Uri uri = data.getData();  //On recupere la photo
-
-            Bitmap bitmap = BitmapFactory.decodeFile(getPath(uri));
-
-            Log.e("tag","Photo télécharger"+ " " + bitmap); //On recupere le chemin (conversion de l'objet en chemin
+            photo.setImageURI(uri);
+            Log.e("tag","Photo télécharger"+ " " + getPath(uri)); //On recupere le chemin (conversion de l'objet en chemin
 
         }
     }

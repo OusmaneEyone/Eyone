@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.nanouch.applicationeyonnemobile.FragmentAdaptater.MainCreer;
+import com.example.nanouch.applicationeyonnemobile.FragmentAdaptater.MainCreerOrga;
 
 public class PageDacceuil extends AppCompatActivity {
 
@@ -31,6 +32,15 @@ public class PageDacceuil extends AppCompatActivity {
             }
         });
 
+        organisation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                showFilterPopup2(view);
+
+            }
+        });
+
     }
 
     private void showFilterPopup(View v) {   // Permet d'ajouter notre menu à une vue
@@ -44,14 +54,37 @@ public class PageDacceuil extends AppCompatActivity {
                     case R.id.item_annuaire:
                         break;
                     case R.id.item_creer:
-
                         Intent intent_creer = new Intent(getApplicationContext(), MainCreer.class);
                         startActivity(intent_creer);
-
                         break;
                     case R.id.item_groupe:
                         break;
                     case R.id.item_import:
+                        break;
+                }
+                return false;
+            }
+        });
+        popup.show();
+    }
+
+    private void showFilterPopup2(View v) {   // Permet d'ajouter notre menu à une vue
+        PopupMenu popup = new PopupMenu(this, v);
+        popup.getMenuInflater().inflate(R.menu.menu_organisation, popup.getMenu());
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                switch (item.getItemId()) {
+
+                    case R.id.item_creerorg:
+                        Intent intent_creerorg = new Intent(getApplicationContext(), MainCreerOrga.class);
+                        startActivity(intent_creerorg);
+                        break;
+                    case R.id.item_rechercher:
+                        break;
+                    case R.id.item_organigramme:
+                        break;
+                    case R.id.item_typorganisation:
                         break;
                 }
                 return false;

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_annuaire"
+        android:title="Annuaire"
+        android:visible="true"/>
+    <item
+        android:id="@+id/item_creer"
+        android:title="Creer"
+        android:visible="true"/>
+    <item
+        android:id="@+id/item_groupe"
+        android:title="Groupe"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/item_import"
+        android:title="Import"
+        android:visible="true"/>
+</menu>

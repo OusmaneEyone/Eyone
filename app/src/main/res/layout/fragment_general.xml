@@ -3,69 +3,61 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    <LinearLayout
-        android:id="@+id/identite"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:padding="10dip"
-        android:gravity="center"
-        android:orientation="vertical">
+
+<LinearLayout
+    android:id="@+id/general"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dip"
+    android:gravity="center"
+    android:orientation="vertical">
 
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txt_prenom"
-        android:hint="Prenom" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt_nom"
-        android:hint="Nom" />
+        android:id="@+id/txt_denomination"
+        android:hint="Denomination" />
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spin_Sexe" />
+        android:id="@+id/spin_type_entite" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spin_pays" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:inputType="phone"
         android:ems="10"
-        android:id="@+id/txt_mail"
-        android:hint="Mail" />
+        android:id="@+id/txt_phone"
+        android:hint="Telephone" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:inputType="phone"
         android:ems="10"
-        android:id="@+id/txt_mailNot"
-        android:hint="Mail de notification" />
+        android:id="@+id/txt_fax"
+        android:hint="Fax" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:inputType="textPostalAddress"
         android:ems="10"
-        android:id="@+id/txt_password"
-        android:hint="Mot de passe" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/txt_password2"
-        android:hint="Confirmation mot de passe" />
+        android:id="@+id/txt_adressentite"
+        android:hint="Adresse" />
 
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Notification par mail"
-        android:id="@+id/switch1"
+        android:text="Gestion de Stock"
+        android:id="@+id/switchgestionstock"
         android:textOff="OFF"
         android:textOn="ON"
         android:textSize="20dp" />
@@ -73,9 +65,36 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/txt_sigle"
+        android:hint="Sigle" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spin_device" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/txt_autrenum"
+        android:hint="Autre Numero" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/txt_mailgeneral"
+        android:hint="Mail" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/txt_commentaire"
+        android:id="@+id/txt_commentairedegeneral"
         android:layout_gravity="center_horizontal"
         android:hint="Commentaire"
         android:lines="3"
@@ -89,8 +108,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sauvegarder"
-            android:id="@+id/btn_sauvegarder"
+            android:text="Suivant"
+            android:id="@+id/btn_suivant"
             android:layout_weight="1" />
 
         <Button
@@ -102,5 +121,6 @@
 
 
     </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+
+</LinearLayout>
+    </ScrollView>

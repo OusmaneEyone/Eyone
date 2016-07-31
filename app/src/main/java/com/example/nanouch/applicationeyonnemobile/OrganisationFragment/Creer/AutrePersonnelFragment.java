@@ -1,4 +1,4 @@
-package com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Creer;
+package com.example.nanouch.applicationeyonnemobile.OrganisationFragment.Creer;
 
 
 import android.os.Bundle;
@@ -9,18 +9,22 @@ import android.view.ViewGroup;
 
 import com.example.nanouch.applicationeyonnemobile.R;
 
-public class CoordonneeFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class AutrePersonnelFragment extends Fragment {
 
 
-    public CoordonneeFragment() {
+    public AutrePersonnelFragment() {
+        // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_coordonnee, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_autre_personnel, container, false);
     }
 
 }

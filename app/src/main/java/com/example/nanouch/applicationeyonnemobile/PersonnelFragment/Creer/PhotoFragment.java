@@ -60,7 +60,7 @@ public class PhotoFragment extends Fragment {
 
     }
 
-    public String getPath(Uri uri) {
+    public String getPath(Uri uri) {   // le chemin de la photo
         String[] projection = { MediaStore.Images.Media.DATA };
         Cursor cursor = getActivity().managedQuery(uri, projection, null, null, null);
         int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);

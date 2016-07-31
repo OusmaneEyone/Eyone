@@ -11,9 +11,6 @@ import android.widget.Spinner;
 
 import com.example.nanouch.applicationeyonnemobile.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class IdentiteFragment extends Fragment {
 
 

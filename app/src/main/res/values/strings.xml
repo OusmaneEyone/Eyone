@@ -14,5 +14,49 @@
             Feminin
         </item>
     </string-array>
+
+    <string-array name="Type">
+        <item>
+            Entreprise
+        </item>
+
+        <item>
+            Groupe
+        </item>
+    </string-array>
+
+    <string-array name="Pays">
+        <item>
+            Senegal
+        </item>
+
+        <item>
+            France
+        </item>
+        <item>
+            Mali
+        </item>
+        <item>
+            Guinnee
+        </item>
+        <item>
+            Cote divoire
+        </item>
+    </string-array>
+
+    <string-array name="Device">
+        <item>
+            Euro
+        </item>
+
+        <item>
+            Dollar
+        </item>
+        <item>
+            Franc CFA
+        </item>
+
+    </string-array>
+
     <string name="title_activity_main_creer_orga">MainCreerOrga</string>
 </resources>

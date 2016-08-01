@@ -7,9 +7,13 @@ import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.nanouch.applicationeyonnemobile.FragmentAdaptater.MainCreer;
 import com.example.nanouch.applicationeyonnemobile.FragmentAdaptater.MainCreerOrga;
+import com.example.nanouch.applicationeyonnemobile.OrganisationFragment.Creer.GeneralFragment;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GeneralGroupeFragment;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.PersonelGroupeFragment;
 
 public class PageDacceuil extends AppCompatActivity {
 
@@ -57,7 +61,13 @@ public class PageDacceuil extends AppCompatActivity {
                         Intent intent_creer = new Intent(getApplicationContext(), MainCreer.class);
                         startActivity(intent_creer);
                         break;
-                    case R.id.item_groupe:
+                    case R.id.creer_groupe:
+                        //Intent intent_creer_groupe = new Intent(getApplicationContext(), GeneralGroupeFragment.class);
+                        //startActivity(intent_creer_groupe);
+                        break;
+                    case R.id.rechervher_groupe:
+                        //Intent intent_rechercher_groupe = new Intent(getApplicationContext(),PersonelGroupeFragment.class);
+                        //startActivity(intent_rechercher_groupe);
                         break;
                     case R.id.item_import:
                         break;

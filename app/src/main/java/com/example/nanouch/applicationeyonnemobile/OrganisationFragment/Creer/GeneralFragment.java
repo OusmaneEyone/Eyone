@@ -77,7 +77,7 @@ public class GeneralFragment extends Fragment {
                     onStop();
                 }
                 else {
-                    Intent responsablesfragment = new Intent(getActivity(), ResponsablesFragment.class); //lien entre les actvités
+                    Intent responsablesfragment = new Intent(getActivity(), ResponsablesFragment.class); //lien entre les actvités //NBblemeici
 
                     startActivity(responsablesfragment); // activité d'acceuil aprés la connexion
                 }

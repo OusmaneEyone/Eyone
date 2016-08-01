@@ -74,11 +74,11 @@ public class PhotoFragment extends Fragment {
 
         if (requestCode == codePhoto && data != null) {   //Si la requete est égale à notre codePhoto et les données ne sont pas nulle
            Uri uri = data.getData();  //On recupere la photo
-<<<<<<< HEAD
+
             photo.setImageURI(uri );
-=======
+
             photo.setImageURI(uri);  //Permet d'afficher la photo
->>>>>>> 1fd82e81721342104e4920f9c097134c3002a5f4
+
             Log.e("tag","Photo télécharger"+ " " + getPath(uri)); //On recupere le chemin (conversion de l'objet en chemin
         }
     }

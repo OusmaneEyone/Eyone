@@ -9,21 +9,24 @@
         android:id="@+id/item_creer"
         android:title="Creer"
         android:visible="true"/>
+
+    <item
+        android:id="@+id/item_import"
+        android:title="Import"
+        android:visible="true"/>
     <item
         android:id="@+id/item_groupe"
         android:title="Groupe"
-        android:visible="true"/>
+        android:visible="true">
 
-    <menu android:id="@+id/creer_groupe">
+    <menu android:id="@+id/sous_menu_groupe">
         <item android:id="@+id/favoris"
             android:title="Creer"   />
 
         <item android:id="@+id/rechervher_groupe"
             android:title="Rechercher"  />
     </menu>
+    </item>
 
-    <item
-        android:id="@+id/item_import"
-        android:title="Import"
-        android:visible="true"/>
+
 </menu>

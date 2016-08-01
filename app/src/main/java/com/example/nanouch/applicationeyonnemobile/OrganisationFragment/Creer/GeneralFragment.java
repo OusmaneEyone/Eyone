@@ -4,6 +4,8 @@ package com.example.nanouch.applicationeyonnemobile.OrganisationFragment.Creer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +28,7 @@ public class GeneralFragment extends Fragment {
     private Spinner type,pays,device;
     private ArrayAdapter<CharSequence> adapter1,adapter2,adapter3;
     private Button suivant,annuler;
+    FragmentManager fragmentManager;
 
     public GeneralFragment() {
     }
@@ -77,9 +80,25 @@ public class GeneralFragment extends Fragment {
                     onStop();
                 }
                 else {
-                    Intent responsablesfragment = new Intent(getActivity(), ResponsablesFragment.class); //lien entre les actvités //NBblemeici
 
-                    startActivity(responsablesfragment); // activité d'acceuil aprés la connexion
+                    /*
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+    Search fragment = new  Search();
+    fragmentTransaction.add(R.id.mainLayout,fragment , "MY_FRAG");
+    fragmentTransaction.commit();*/
+                    /*Intent responsablesfragment = new Intent(getActivity(), ResponsablesFragment.class); //lien entre les actvités //NBblemeici
+                    startActivity(responsablesfragment);*/
+
+
+                    /*fragmentManager = getFragmentManager();
+                    // Transaction start
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                    ResponsablesFragment rf = new ResponsablesFragment();
+                    fragmentTransaction.replace(R.id.general , rf);
+
+                    fragmentTransaction.commit();*/
+
                 }
 
             }

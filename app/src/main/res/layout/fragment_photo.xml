@@ -18,4 +18,25 @@
         android:text="Télécharger"
         />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sauvegarder"
+            android:id="@+id/btn_sauvegarder_photo"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Annuler"
+            android:id="@+id/btn_annuler_photo"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
 </LinearLayout>

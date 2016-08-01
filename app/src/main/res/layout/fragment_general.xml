@@ -13,11 +13,19 @@
     android:orientation="vertical">
 
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt_denomination"
-        android:hint="Denomination" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_denomination"
+            android:hint="Denomination" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
 
     <Spinner
         android:layout_width="match_parent"
@@ -29,29 +37,50 @@
         android:layout_height="wrap_content"
         android:id="@+id/spin_pays" />
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/txt_phone"
-        android:hint="Telephone" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/txt_fax"
-        android:hint="Fax" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/txt_phone"
+            android:hint="Telephone" />
 
-    <EditText
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:ems="10"
-        android:id="@+id/txt_adressentite"
-        android:hint="Adresse" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/txt_fax"
+            android:hint="Fax" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:ems="10"
+            android:id="@+id/txt_adressentite"
+            android:hint="Adresse" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
 
     <Switch
         android:layout_width="wrap_content"
@@ -62,43 +91,69 @@
         android:textOn="ON"
         android:textSize="20dp" />
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt_sigle"
-        android:hint="Sigle" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_sigle"
+            android:hint="Sigle" />
+
+    </android.support.design.widget.TextInputLayout>
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spin_device" />
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/txt_autrenum"
-        android:hint="Autre Numero" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/txt_mailgeneral"
-        android:hint="Mail" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/txt_autrenum"
+            android:hint="Autre Numero" />
 
-    <EditText
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/txt_commentairedegeneral"
-        android:layout_gravity="center_horizontal"
-        android:hint="Commentaire"
-        android:lines="3"
-        android:gravity="top" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/txt_mailgeneral"
+            android:hint="Mail" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/txt_commentairedegeneral"
+            android:layout_gravity="center_horizontal"
+            android:hint="Commentaire"
+            android:lines="3"
+            android:gravity="top" />
+
+    </android.support.design.widget.TextInputLayout>
+
 
     <LinearLayout
         android:orientation="horizontal"
@@ -109,14 +164,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Suivant"
-            android:id="@+id/btn_suivant"
+            android:id="@+id/btn_suivant_general"
             android:layout_weight="1" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Annuler"
-            android:id="@+id/btn_annuler"
+            android:id="@+id/btn_annuler_general"
             android:layout_weight="1" />
 
 

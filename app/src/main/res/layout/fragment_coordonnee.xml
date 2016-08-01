@@ -11,34 +11,52 @@
         android:gravity="center"
         android:orientation="vertical">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:ems="10"
-        android:id="@+id/txt_adress"
-        android:hint="Addresse" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/txt_phoneFix"
-        android:hint="Telephone fixe" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:ems="10"
+                android:id="@+id/txt_adress"
+                android:hint="Addresse" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/txt_phoneFix"
+                android:hint="Telephone fixe" />
+        </android.support.design.widget.TextInputLayout>
+
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spinner" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/txt_mobileSms"
-        android:hint="Numero" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/txt_mobileSms"
+                android:hint="Numero" />
+        </android.support.design.widget.TextInputLayout>
+
 
     <LinearLayout
         android:orientation="horizontal"
@@ -49,14 +67,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sauvegarder"
-            android:id="@+id/btn_sauvegarder"
+            android:id="@+id/btn_sauvegarder_coordonne"
             android:layout_weight="1" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Annuler"
-            android:id="@+id/btn_annuler"
+            android:id="@+id/btn_annuler_coordonne"
             android:layout_weight="1" />
 
     </LinearLayout>

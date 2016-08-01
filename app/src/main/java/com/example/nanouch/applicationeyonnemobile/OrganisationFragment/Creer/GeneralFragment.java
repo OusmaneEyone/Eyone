@@ -63,8 +63,8 @@ public class GeneralFragment extends Fragment {
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         device.setAdapter(adapter3);
 
-        suivant = (Button) view.findViewById(R.id.btn_suivant);
-        annuler = (Button) view.findViewById(R.id.btn_annuler);
+        suivant = (Button) view.findViewById(R.id.btn_suivant_general);
+        annuler = (Button) view.findViewById(R.id.btn_annuler_general);
 
         suivant.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -50,6 +50,10 @@ public class MainCreerOrga extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
+    public void setCurrentItem(int position, boolean nextPage) {
+        viewPager.setCurrentItem(position, nextPage);
+    }
+
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
@@ -60,8 +64,23 @@ public class MainCreerOrga extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
+            switch (position){
+                case 0:
+                    GeneralFragment generalFragment = new GeneralFragment();
+                    return generalFragment;
+                case 1:
+                    ResponsablesFragment responsablesFragment = new ResponsablesFragment();
+                    return responsablesFragment;
+
+                case  2:
+                    AutrePersonnelFragment autrePersonnelFragment = new AutrePersonnelFragment();
+                    return autrePersonnelFragment;
+
+            }
             return mFragmentList.get(position);
         }
+
+
 
         @Override
         public int getCount() {

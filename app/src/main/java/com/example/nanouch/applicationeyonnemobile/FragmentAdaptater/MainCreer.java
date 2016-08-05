@@ -10,9 +10,15 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 
 
+import com.example.nanouch.applicationeyonnemobile.OrganisationFragment.Creer.AutrePersonnelFragment;
+import com.example.nanouch.applicationeyonnemobile.OrganisationFragment.Creer.GeneralFragment;
+import com.example.nanouch.applicationeyonnemobile.OrganisationFragment.Creer.ResponsablesFragment;
 import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Creer.CoordonneeFragment;
 import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Creer.IdentiteFragment;
 import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Creer.PhotoFragment;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GeneralGroupeFragment;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.PersonelGroupeFragment;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.RechercherGroupeFragment;
 import com.example.nanouch.applicationeyonnemobile.R;
 
 import java.util.ArrayList;
@@ -39,13 +45,16 @@ public class MainCreer extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
-
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new IdentiteFragment(), "Identité");
         adapter.addFragment(new PhotoFragment(), "Photo");
         adapter.addFragment(new CoordonneeFragment(), "Coordonnées");
         viewPager.setAdapter(adapter);
+    }
+
+    public void setCurrentItem(int position, boolean nextPage) {
+        viewPager.setCurrentItem(position, nextPage);
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -56,8 +65,34 @@ public class MainCreer extends AppCompatActivity {
             super(manager);
         }
 
+
         @Override
         public Fragment getItem(int position) {
+            switch (position){
+                case 0:
+                   CoordonneeFragment coordonneeFragment  = new CoordonneeFragment();
+                    return coordonneeFragment;
+                case 1:
+                    IdentiteFragment identiteFragment =  new IdentiteFragment();
+                    return identiteFragment;
+
+                case  2:
+                    PhotoFragment photoFragment =  new PhotoFragment();
+                    return photoFragment;
+
+                case 3:
+                    GeneralGroupeFragment generalGroupeFragment = new GeneralGroupeFragment();
+                    return generalGroupeFragment;
+
+                case 4:
+                    PersonelGroupeFragment personelGroupeFragment = new PersonelGroupeFragment();
+                    return personelGroupeFragment;
+
+                case 5:
+                    RechercherGroupeFragment rechercherGroupeFragment = new RechercherGroupeFragment();
+                    return rechercherGroupeFragment;
+
+            }
             return mFragmentList.get(position);
         }
 

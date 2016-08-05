@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.example.nanouch.applicationeyonnemobile.FragmentAdaptater.MainCreerOrga;
 import com.example.nanouch.applicationeyonnemobile.PageDacceuil;
 import com.example.nanouch.applicationeyonnemobile.R;
 
@@ -28,7 +29,7 @@ public class GeneralFragment extends Fragment {
     private Spinner type,pays,device;
     private ArrayAdapter<CharSequence> adapter1,adapter2,adapter3;
     private Button suivant,annuler;
-    FragmentManager fragmentManager;
+    private FragmentManager fragmentManager;
 
     public GeneralFragment() {
     }
@@ -81,26 +82,9 @@ public class GeneralFragment extends Fragment {
                 }
                 else {
 
-                    /*
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-    Search fragment = new  Search();
-    fragmentTransaction.add(R.id.mainLayout,fragment , "MY_FRAG");
-    fragmentTransaction.commit();*/
-                    /*Intent responsablesfragment = new Intent(getActivity(), ResponsablesFragment.class); //lien entre les actvités //NBblemeici
-                    startActivity(responsablesfragment);*/
-
-
-                    /*fragmentManager = getFragmentManager();
-                    // Transaction start
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-                    ResponsablesFragment rf = new ResponsablesFragment();
-                    fragmentTransaction.replace(R.id.general , rf);
-
-                    fragmentTransaction.commit();*/
+                    ((MainCreerOrga)getActivity()).setCurrentItem(1, true);
 
                 }
-
             }
         });
 

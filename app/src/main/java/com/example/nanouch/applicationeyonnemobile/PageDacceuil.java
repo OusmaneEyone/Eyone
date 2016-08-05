@@ -62,12 +62,10 @@ public class PageDacceuil extends AppCompatActivity {
                         startActivity(intent_creer);
                         break;
                     case R.id.creer_groupe:
-                        //Intent intent_creer_groupe = new Intent(getApplicationContext(), GeneralGroupeFragment.class);
-                        //startActivity(intent_creer_groupe);
+                        //(MainCreer)this.setCurrentItem(3, true);
+                       
                         break;
                     case R.id.rechervher_groupe:
-                        //Intent intent_rechercher_groupe = new Intent(getApplicationContext(),PersonelGroupeFragment.class);
-                        //startActivity(intent_rechercher_groupe);
                         break;
                     case R.id.item_import:
                         break;

@@ -11,5 +11,40 @@
     android:orientation="vertical">
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_personnelaffect_groupe"
+            android:text="Personnel afefcté"
+            android:textSize="30dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifier"
+            android:id="@+id/btn_modifier_personnel_groupe"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Creer"
+            android:id="@+id/btn_creer_personnel_groupe"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rechercher"
+            android:id="@+id/btn_rechercher_personnel_groupe"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
 </LinearLayout>
 </ScrollView>

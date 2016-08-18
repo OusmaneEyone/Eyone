@@ -1,12 +1,14 @@
 package com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Annuaire;
 
 import android.content.Context;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.view.View;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import com.example.nanouch.applicationeyonnemobile.R;
+import android.widget.Toast;
 
 import com.example.nanouch.applicationeyonnemobile.Modele.Annuaire;
 
@@ -17,9 +19,27 @@ import java.util.List;
 
 public class AnnuaireAdapter extends ArrayAdapter<Annuaire> {
 
+    List<Annuaire> mData;
+
     public AnnuaireAdapter(Context context, int resource, List<Annuaire> annuaire) {
         super(context,0,annuaire);
 
+    }
+
+    public int getCount()
+    {
+        return mData.size();
+    }
+
+    public Annuaire getItem(int position)
+    {
+        return mData.get(position);
+    }
+
+    public long getItemId(int position)
+    {
+
+        return position;
     }
 
 

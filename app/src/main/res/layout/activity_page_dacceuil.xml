@@ -8,8 +8,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:id="@+id/pagedaccueil"
     tools:context="com.example.nanouch.applicationeyonnemobile.PageDacceuil">
-
 
     <Button
         android:layout_width="match_parent"

@@ -12,12 +12,14 @@ import android.widget.Toast;
 import com.example.nanouch.applicationeyonnemobile.FragmentAdaptater.MainCreer;
 import com.example.nanouch.applicationeyonnemobile.FragmentAdaptater.MainCreerOrga;
 import com.example.nanouch.applicationeyonnemobile.OrganisationFragment.Creer.GeneralFragment;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Annuaire.AnnuaireActivity;
 import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GeneralGroupeFragment;
 import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.PersonelGroupeFragment;
 
 public class PageDacceuil extends AppCompatActivity {
 
-    Button personnel,organisation;
+    private Button personnel,organisation;
+    private android.support.v4.app.FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,8 @@ public class PageDacceuil extends AppCompatActivity {
 
         personnel = (Button) findViewById(R.id.btn_personnel);
         organisation = (Button) findViewById(R.id.btn_organisation);
+        fragmentManager = getSupportFragmentManager();
+
 
         personnel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,17 +57,22 @@ public class PageDacceuil extends AppCompatActivity {
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             public boolean onMenuItemClick(MenuItem item) {
 
+
                 switch (item.getItemId()) {
 
                     case R.id.item_annuaire:
+                        Intent intent_annuaire = new Intent(getApplicationContext(), AnnuaireActivity.class);
+                        startActivity(intent_annuaire);
                         break;
                     case R.id.item_creer:
                         Intent intent_creer = new Intent(getApplicationContext(), MainCreer.class);
                         startActivity(intent_creer);
                         break;
                     case R.id.creer_groupe:
-                        //(MainCreer)this.setCurrentItem(3, true);
-                       
+                        GeneralGroupeFragment generalGroupeFragment =  new GeneralGroupeFragment(); //new tasks()
+                        android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(android.R.id.content, generalGroupeFragment);
+                        fragmentTransaction.commit();
                         break;
                     case R.id.rechervher_groupe:
                         break;

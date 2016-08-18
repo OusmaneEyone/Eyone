@@ -65,7 +65,6 @@ public class MainCreer extends AppCompatActivity {
             super(manager);
         }
 
-
         @Override
         public Fragment getItem(int position) {
             switch (position){
@@ -110,6 +109,11 @@ public class MainCreer extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
+    }
+
+    private String getFragmentTag(int viewPagerId, int fragmentPosition)
+    {
+        return "android:switcher:" + viewPagerId + ":" + fragmentPosition;
     }
 
 }

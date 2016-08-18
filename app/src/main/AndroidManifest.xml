@@ -22,11 +22,12 @@
         <activity
             android:name=".FragmentAdaptater.MainCreer"
             android:label="@string/title_activity_main_personnel"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".FragmentAdaptater.MainCreerOrga"
             android:label="@string/title_activity_main_creer_orga"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PersonnelFragment.Annuaire.AnnuaireActivity"></activity>
     </application>
 
 </manifest>

@@ -13,6 +13,10 @@ public class PageConnexion extends AppCompatActivity {
     private EditText identifiant,motdepasse;
     private Button connexion; // pour la connexion
     private static String mdp,id;
+    //private String emailvalide = identifiant.getText().toString().trim();
+   // private String motdepassevalide = motdepasse.getText().toString().trim();
+    //private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    //private String motdepassePattern = "[a-zA-Z0-9._-]+";
 
 
     @Override
@@ -23,6 +27,7 @@ public class PageConnexion extends AppCompatActivity {
         identifiant = (EditText) findViewById(R.id.input_identifiant);
         motdepasse = (EditText) findViewById(R.id.input_motdepasse);
 
+
         connexion = (Button) findViewById(R.id.btn_connexion);
 
 
@@ -30,18 +35,22 @@ public class PageConnexion extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(identifiant.getText().toString().isEmpty() || motdepasse.getText().toString().isEmpty())// on recupere le texte avec toString et on verifie si il est vide
+                if (identifiant.getText().toString().isEmpty() || motdepasse.getText().toString().isEmpty())// on recupere le texte avec toString et on verifie si il est vide
 
                 {
-                    Toast.makeText(getApplicationContext(),"Identifiant ou mot de passe incorrecte",Toast.LENGTH_LONG).show(); // message maxi 5 seconde et show pour montrer
+                    Toast.makeText(getApplicationContext(), "champs vides", Toast.LENGTH_LONG).show(); // message maxi 5 seconde et show pour montrer
                     onStop();
                 }
-                else {
-                    Intent pagedaccueil = new Intent(getApplicationContext(), PageDacceuil.class); //lien entre les actvités
 
+                else
+
+                {
+
+                    Toast.makeText(getApplicationContext(), "valid passeword and email address", Toast.LENGTH_SHORT).show();
+
+                    Intent pagedaccueil = new Intent(getApplicationContext(), PageDacceuil.class); //lien entre les actvités
                     startActivity(pagedaccueil); // activité d'acceuil aprés la connexion
                 }
-
             }
         });
 

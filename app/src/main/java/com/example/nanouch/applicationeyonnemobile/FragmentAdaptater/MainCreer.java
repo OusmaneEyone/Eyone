@@ -10,14 +10,11 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 
 
-import com.example.nanouch.applicationeyonnemobile.OrganisationFragment.Creer.AutrePersonnelFragment;
-import com.example.nanouch.applicationeyonnemobile.OrganisationFragment.Creer.GeneralFragment;
-import com.example.nanouch.applicationeyonnemobile.OrganisationFragment.Creer.ResponsablesFragment;
 import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Creer.CoordonneeFragment;
 import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Creer.IdentiteFragment;
 import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Creer.PhotoFragment;
-import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GeneralGroupeFragment;
-import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.PersonelGroupeFragment;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GroupeFragment1.GeneralGroupeFragment;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GroupeFragment1.PersonelGroupeFragment;
 import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.RechercherGroupeFragment;
 import com.example.nanouch.applicationeyonnemobile.R;
 

@@ -18,14 +18,8 @@
         android:id="@+id/item_groupe"
         android:title="Groupe"
         android:visible="true">
+        
 
-    <menu android:id="@+id/sous_menu_groupe">
-        <item android:id="@+id/creer_groupe"
-            android:title="Creer"   />
-
-        <item android:id="@+id/rechervher_groupe"
-            android:title="Rechercher"  />
-    </menu>
     </item>
 
 </menu>

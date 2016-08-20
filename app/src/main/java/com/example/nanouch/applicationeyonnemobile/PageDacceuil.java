@@ -7,14 +7,15 @@ import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.app.FragmentManager;
 
 import com.example.nanouch.applicationeyonnemobile.FragmentAdaptater.MainCreer;
 import com.example.nanouch.applicationeyonnemobile.FragmentAdaptater.MainCreerOrga;
-import com.example.nanouch.applicationeyonnemobile.OrganisationFragment.Creer.GeneralFragment;
 import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Annuaire.AnnuaireActivity;
-import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GeneralGroupeFragment;
-import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.PersonelGroupeFragment;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GroupeFragment1.GeneralGroupeFragment;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GroupeFragment1.GroupeActivity;
 
 public class PageDacceuil extends AppCompatActivity {
 
@@ -28,7 +29,7 @@ public class PageDacceuil extends AppCompatActivity {
 
         personnel = (Button) findViewById(R.id.btn_personnel);
         organisation = (Button) findViewById(R.id.btn_organisation);
-        fragmentManager = getSupportFragmentManager();
+
 
 
         personnel.setOnClickListener(new View.OnClickListener() {
@@ -68,13 +69,13 @@ public class PageDacceuil extends AppCompatActivity {
                         Intent intent_creer = new Intent(getApplicationContext(), MainCreer.class);
                         startActivity(intent_creer);
                         break;
-                    case R.id.creer_groupe:
-                        GeneralGroupeFragment generalGroupeFragment =  new GeneralGroupeFragment(); //new tasks()
-                        android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(android.R.id.content, generalGroupeFragment);
-                        fragmentTransaction.commit();
-                        break;
-                    case R.id.rechervher_groupe:
+                    case R.id.item_groupe:
+                        Intent intent_groupe = new Intent(getApplicationContext(), GroupeActivity.class);
+                        startActivity(intent_groupe);
+
+                        //GeneralGroupeFragment generalGroupeFragment =  new GeneralGroupeFragment(); //new tasks()
+                        //generalGroupeFragment.setArguments(getIntent().getExtras());
+                        //setFragment(generalGroupeFragment);
                         break;
                     case R.id.item_import:
                         break;
@@ -83,6 +84,17 @@ public class PageDacceuil extends AppCompatActivity {
             }
         });
         popup.show();
+    }
+
+    public void setFragment(Fragment frag) {
+
+        fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        //fragmentTransaction.add(frag.newInstance(),null);
+        fragmentTransaction.replace(R.id.pagedaccueil, frag);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
     }
 
     private void showFilterPopup2(View v) {   // Permet d'ajouter notre menu à une vue

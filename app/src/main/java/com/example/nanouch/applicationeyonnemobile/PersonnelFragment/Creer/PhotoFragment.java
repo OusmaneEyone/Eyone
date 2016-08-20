@@ -24,7 +24,7 @@ import com.example.nanouch.applicationeyonnemobile.R;
  */
 public class PhotoFragment extends Fragment {
 
-    private Button telecharger;
+    private Button telecharger,sauvegarder;
     private ImageView photo;
     private static int codePhoto = 0;
 
@@ -40,6 +40,7 @@ public class PhotoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_photo, container, false);
 
         telecharger = (Button) view.findViewById(R.id.btn_telecharger);
+        sauvegarder = (Button) view.findViewById(R.id.btn_sauvegarder);
         photo = (ImageView)view.findViewById(R.id.imag_photo);
 
         telecharger.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +53,14 @@ public class PhotoFragment extends Fragment {
                 intentJD.addCategory(Intent.CATEGORY_OPENABLE);
 
                 startActivityForResult(intentJD, codePhoto);
+
+            }
+        });
+
+        sauvegarder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
 
             }
         });

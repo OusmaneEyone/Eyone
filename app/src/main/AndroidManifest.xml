@@ -27,7 +27,9 @@
             android:name=".FragmentAdaptater.MainCreerOrga"
             android:label="@string/title_activity_main_creer_orga"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".PersonnelFragment.Annuaire.AnnuaireActivity"></activity>
+        <activity android:name=".PersonnelFragment.Annuaire.AnnuaireActivity" />
+        <activity android:name=".PersonnelFragment.Groupe.GroupeFragment1.Vide" />
+        <activity android:name=".PersonnelFragment.Groupe.GroupeFragment1.GroupeActivity"></activity>
     </application>
 
 </manifest>

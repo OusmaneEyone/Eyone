@@ -9,13 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.Fragment;
-import android.app.FragmentManager;
 
 import com.example.nanouch.applicationeyonnemobile.FragmentAdaptater.MainCreer;
 import com.example.nanouch.applicationeyonnemobile.FragmentAdaptater.MainCreerOrga;
 import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Annuaire.AnnuaireActivity;
-import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GroupeFragment1.GeneralGroupeFragment;
-import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GroupeFragment1.GroupeActivity;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GroupeActivity;
 
 public class PageDacceuil extends AppCompatActivity {
 
@@ -58,25 +56,24 @@ public class PageDacceuil extends AppCompatActivity {
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             public boolean onMenuItemClick(MenuItem item) {
 
-
                 switch (item.getItemId()) {
 
                     case R.id.item_annuaire:
                         Intent intent_annuaire = new Intent(getApplicationContext(), AnnuaireActivity.class);
                         startActivity(intent_annuaire);
                         break;
+                    case R.id.item_groupe:
+                        Intent intent_groupe = new Intent(getApplicationContext(), GroupeActivity.class);
+                        startActivity(intent_groupe);
+                        break;
                     case R.id.item_creer:
                         Intent intent_creer = new Intent(getApplicationContext(), MainCreer.class);
                         startActivity(intent_creer);
                         break;
-                    case R.id.item_groupe:
-                        Intent intent_groupe = new Intent(getApplicationContext(), GroupeActivity.class);
-                        startActivity(intent_groupe);
-
                         //GeneralGroupeFragment generalGroupeFragment =  new GeneralGroupeFragment(); //new tasks()
                         //generalGroupeFragment.setArguments(getIntent().getExtras());
                         //setFragment(generalGroupeFragment);
-                        break;
+
                     case R.id.item_import:
                         break;
                 }

@@ -34,7 +34,7 @@ public class IdentiteFragment extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sexe.setAdapter(adapter);
 
-        sauvegarder.setOnClickListener(new View.OnClickListener() {
+       /* sauvegarder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -48,7 +48,7 @@ public class IdentiteFragment extends Fragment {
 
 
             }
-        });
+        });*/
 
         return view;
     }

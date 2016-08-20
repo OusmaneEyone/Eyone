@@ -57,13 +57,13 @@ public class PhotoFragment extends Fragment {
             }
         });
 
-        sauvegarder.setOnClickListener(new View.OnClickListener() {
+        /*sauvegarder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
             }
-        });
+        });*/
 
         return view;
 

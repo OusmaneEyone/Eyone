@@ -1,4 +1,4 @@
-package com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GroupeFragment1;
+package com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe;
 
 
 import android.os.Bundle;

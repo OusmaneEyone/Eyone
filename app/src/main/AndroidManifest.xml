@@ -29,7 +29,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PersonnelFragment.Annuaire.AnnuaireActivity" />
         <activity android:name=".PersonnelFragment.Groupe.GroupeFragment1.Vide" />
-        <activity android:name=".PersonnelFragment.Groupe.GroupeFragment1.GroupeActivity"></activity>
+        <activity android:name=".PersonnelFragment.Groupe.GroupeActivity"></activity>
     </application>
 
 </manifest>

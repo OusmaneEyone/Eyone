@@ -27,7 +27,7 @@ public class CoordonneeFragment extends Fragment {
         sauvegarder = (Button) view.findViewById(R.id.btn_sauvegarder);
         annuler = (Button) view.findViewById(R.id.btn_annuler);
 
-        sauvegarder.setOnClickListener(new View.OnClickListener() {
+       /* sauvegarder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -41,7 +41,7 @@ public class CoordonneeFragment extends Fragment {
 
 
             }
-        });
+        });*/
 
         return view;
     }

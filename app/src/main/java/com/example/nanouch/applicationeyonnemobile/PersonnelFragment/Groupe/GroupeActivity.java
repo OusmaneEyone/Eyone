@@ -1,4 +1,4 @@
-package com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GroupeFragment1;
+package com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.GeneralGroupeFragment;
+import com.example.nanouch.applicationeyonnemobile.PersonnelFragment.Groupe.RechercherGroupeFragment;
 import com.example.nanouch.applicationeyonnemobile.R;
 
 public class GroupeActivity extends AppCompatActivity {
@@ -27,7 +29,7 @@ public class GroupeActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 GeneralGroupeFragment generalGroupeFragment =  new GeneralGroupeFragment(); //new tasks()
-                //generalGroupeFragment.setArguments(getIntent().getExtras());
+                generalGroupeFragment.setArguments(getIntent().getExtras());
                 setFragment(generalGroupeFragment);
 
             }
@@ -36,6 +38,9 @@ public class GroupeActivity extends AppCompatActivity {
         rechercher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                RechercherGroupeFragment rechercherGroupeFragment = new RechercherGroupeFragment();
+                setFragment(rechercherGroupeFragment);
 
             }
         });

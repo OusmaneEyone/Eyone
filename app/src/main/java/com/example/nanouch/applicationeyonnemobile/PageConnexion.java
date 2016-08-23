@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+import java.util.regex.*;
+
 public class PageConnexion extends AppCompatActivity {
 
     private EditText identifiant,motdepasse;
@@ -42,17 +45,39 @@ public class PageConnexion extends AppCompatActivity {
                     onStop();
                 }
 
+                else if (!isEmailValid(identifiant.getText().toString()))
+                {
+                    Toast.makeText(getApplicationContext(),"Le mail est invalide", Toast.LENGTH_LONG).show();
+                }
+                else if (motdepasse.length() < 6)
+                {
+                    Toast.makeText(getApplicationContext(),"Le mot de passe est invalide", Toast.LENGTH_LONG).show();
+                }
+
                 else
 
                 {
-
                     Toast.makeText(getApplicationContext(), "valid passeword and email address", Toast.LENGTH_SHORT).show();
-
                     Intent pagedaccueil = new Intent(getApplicationContext(), PageDacceuil.class); //lien entre les actvités
                     startActivity(pagedaccueil); // activité d'acceuil aprés la connexion
                 }
+
+
             }
         });
 
     }
+
+    public static boolean isEmailValid(String email) {
+        boolean isValid = false;
+        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+        CharSequence inputStr = email;
+        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(inputStr);
+        if (matcher.matches()) {
+            isValid = true;
+        }
+        return isValid;
+    }
 }
+

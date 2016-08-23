@@ -59,7 +59,6 @@ public class AnnuaireActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
 
                     case R.id.item_visualiser:
-
                         break;
                     case R.id.item_modifier:
                         break;
